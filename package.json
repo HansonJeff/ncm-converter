@@ -1,0 +1,11 @@
+{
+  "name": "ncm-converter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NCM（网易云音乐加密格式）本地转 MP3/FLAC 工具，纯浏览器处理，零依赖",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "node test/roundtrip.js && node test/vocal_test.js"
+  }
+}

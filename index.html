@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCM 转 MP3 · 本地转换器</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">♪</div>
+      <h1>NCM 转 MP3</h1>
+      <p class="subtitle">网易云音乐 NCM 格式本地转换 · 支持批量 · 文件不上传</p>
+    </header>
+
+    <section id="dropZone" class="drop-zone">
+      <div class="drop-inner">
+        <div class="drop-icon">⇪</div>
+        <p class="drop-main">点击选择 或 拖拽 <strong>.ncm</strong> 文件到这里</p>
+        <p class="drop-hint">支持多选批量转换 · 所有处理均在本地浏览器完成</p>
+      </div>
+      <input type="file" id="fileInput" accept=".ncm" multiple hidden>
+    </section>
+
+    <section id="listWrap" class="list-wrap" hidden>
+      <div class="list-head">
+        <span id="summary"></span>
+        <div class="head-actions">
+          <button id="btnZip" class="btn" disabled>打包下载 ZIP</button>
+          <button id="btnClear" class="btn btn-ghost">清空列表</button>
+        </div>
+      </div>
+      <div id="fileList" class="file-list"></div>
+    </section>
+
+    <footer class="footer">
+      <p>🔒 转换全程在本地进行，文件不会上传到任何服务器</p>
+      <p class="dim">输出格式依据原文件内容自动识别（MP3 / FLAC / OGG）· 文件名取自歌曲元数据</p>
+      <p class="dim">🎤 伴奏提取基于中置声道消除 + 低频保留：人声越居中效果越好，输出为无损 WAV；
+        单声道或人声大偏移的曲目效果有限</p>
+    </footer>
+  </main>
+
+  <script src="js/aes.js"></script>
+  <script src="js/ncm.js"></script>
+  <script src="js/zip.js"></script>
+  <script src="js/vocal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
